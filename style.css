@@ -1,122 +1,88 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
-
+/* Estilos generales */
 body {
-    height: 50vh;
-    margin: 0%; 
-    
-    display: flex;
-    flex-direction: column;
+   font-family: Arial, sans-serif;
 }
 
 header {
-    margin: 0%;
-    padding-left: 0%;
+   background-color: #333;
+   color: white;
 }
 
-
-.Alinear_flex {
-padding-top: 0px;
-padding-right: 0px;
-padding-bottom: 0px;
-padding-left: 1000px;
+#menu {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 10px;
 }
-
 
 #menu ul {
-    list-style: none;
-    margin: 0; 
-    padding: 0;
- }
+   list-style: none;
+   display: flex;
+   flex-wrap: wrap;
+}
 
 #menu ul li {
-    float: left; 
- }
-
- #menu a {
-    color: black; 
-    text-decoration: none;
-    display:block; 
-    padding: 20px 25px; 
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
-    height: 100px; width: 100px;
- }
-
- #menu {
-    background-color: rgb(246, 247, 248);
-    width: 2380px;
-    height: 60px; 
- }
-
- .titulo-deportes {
-    padding-left: 5%;
- }
-
-.parrafo {
-   font-size: 30px;
-   padding-left: 5%;
-   padding-right: 30%;
+   margin-right: 20px;
 }
 
-.pgris {
-   font-size: 20px;
-   color: rgb(154, 156, 159);
-   padding-left: 5%;
-}
-
-.titulo {
-   font-size: 60px;
-   padding-left: 5%;
-   padding-right: 30%;
-}
-
-.subtitulo {
-   color: rgb(107, 107, 108); 
-   font-size: 25px;
-   padding-left: 5%;
-}
-
-.fecha {
-   color: rgb(120, 120, 124);
-   font-size: 20px;
-   padding-left: 5%;
-}
-
-.linea {
-   color: rgb(153, 160, 166);
-   padding-left: 5%;
-}
-
-.enlace-dep {
-   color: rgb(83, 81, 81); 
+#menu ul li a {
+   color: white;
    text-decoration: none;
 }
 
-footer { 
-   background-color: rgb(58, 58, 58);
-   margin-top: 7%;
-   margin-left: 0%;
-   padding-top: 3%;
-   display: flex;
-   justify-content: center;
-   
-} 
+/* Estilos para mobile first */
+#hamburger {
+   display: block;
+   background: none;
+   border: none;
+   color: white;
+   font-size: 24px;
+}
 
+#menu ul {
+   display: none;
+   flex-direction: column;
+   width: 100%;
+   text-align: center;
+}
+
+#menu ul.active {
+   display: flex;
+}
+
+/* Media queries para tablet */
+@media (min-width: 600px) {
+   #hamburger {
+       display: none;
+   }
+
+   #menu ul {
+       display: flex;
+       flex-direction: row;
+   }
+}
+
+/* Media queries para desktop */
+@media (min-width: 1024px) {
+   #menu ul li {
+       margin-right: 40px;
+   }
+}
+
+/* Resto de los estilos */
 .inflg {
    height: 50px;
    margin-left: 0%;
    padding-right: 5%;
 }
 
-
 #pie a {
    color: white;
    font-size: 20px;
    text-decoration: none;
    display: flex;
-
    padding-left: 15%;
    padding-bottom: 4%;
-
 }
 
 #pie ul {
@@ -137,10 +103,8 @@ footer {
    font-size: 20px;
    text-decoration: none;
    display: flex;
-
    padding-left: 30%;
    padding-bottom: 4%;
-
 }
 
 #pie2 ul {
@@ -161,7 +125,6 @@ footer {
    font-size: 20px;
    text-decoration: none;
    display: flex;
-
    padding-left: 30%;
    padding-bottom: 4%;
 }
@@ -178,4 +141,4 @@ footer {
    padding-bottom: 4%;
    padding-top: 0%;
 }
-
+ 
